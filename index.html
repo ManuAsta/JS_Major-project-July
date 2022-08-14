@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="creative">
+            <div class="header">
+                <div class="header-content">
+                    <div class="h-icon">O</div>
+                    <div class="h-icon">O</div>
+                    <div class="h-icon">O</div>
+                </div>
+            </div>
+            <div class="creatives">
+                <div class="main_content">
+                    <div class="content">
+                        <h3>Filter By</h3>
+                        <div class="filter_content">
+                            <div id="color-title">
+                                <p>color</p>
+                                <div class="color-palette">
+                                    <div class="color" onclick="s_one()"></div>
+                                    <div class="color" onclick="s_two()" ></div>
+                                    <div class="color" onclick="s_three()"></div>
+                                    <div class="color" onclick="s_four()"></div>
+                                    <div class="color" onclick="s_five()"></div>
+                                    <div class="color" onclick="s_six()"></div>
+                                    <div class="selected"><i class="fa fa-check" aria-hidden="true"></i></div>
+                                </div>
+                            </div>
+                            <div id="title-palette">
+                                    <p>title/subtitle</p>
+                                    <div >
+                                        <input type="text" id="search_title" placeholder="search across the title and subtitle" oninput="searchTitle()">
+                                    </div>
+                            </div>
+                           
+                        </div>
+                        <div class="bar">
+                            <div id="progress_bar">
+                                <div id="bar_fill">
+                                    <div id="fill"></div>
+                                </div>
+                            </div>
+                            <div >
+                                  <span id="count">0</span> / 5 Creatives
+                            </div>
+                        </div>
+                        <div class="add_button">
+                            <button type="button" id="add_creativebtn" value="addcreative" onclick="sidebar()">+ Add Creative</button>
+                        </div>
+
+                        <div >
+                            <div id="lists">
+                                <li class="creative_list"></li>
+                                <li  class="creative_list"></li>
+                                <li  class="creative_list"></li>
+                                <li  class="creative_list"></li>
+                                <li  class="creative_list"></li>
+                                <li  class="creative_list"></li>
+                            </div>
+                            <div id="search_list">
+                                <div class="s_filter"></div>
+                                <div class="s_filter"></div>
+                                <div class="s_filter"></div>
+                                <div class="s_filter"></div>
+                                <div class="s_filter"></div>
+                            </div>
+                            <div id="tsearch_list">
+                                <div class="ts_filter"></div>
+                                <div class="ts_filter"></div>
+                                <div class="ts_filter"></div>
+                                <div class="ts_filter"></div>
+                                <div class="ts_filter"></div>
+                            </div>
+                           
+                        </div>
+                       
+                    </div>
+                       
+                </div>
+                <div id="side_bar">
+                    <div id="creative_title">
+                       <div><h3>Creatives Creation</h3></div>
+                       <div><button  id="closebtn" onclick="closeSideBar()">×</button></div> 
+                    </div>
+                    <div id="creative_form">
+                        <div>
+                            <div>
+                                <label for="title">title</label>
+                            </div>
+                            <div>
+                                <input id="title" class="input_form" type="text" placeholder="Enter text">
+                            </div>
+                        </div><br><br>
+                        <div>
+                            <div>
+                                <label for="subtitle">subtitle</label>
+                            </div>
+                            <div>
+                                <input id="subtitle" class="input_form" type="text" placeholder="Enter text">
+                            </div>
+                        </div><br><br>
+                        <div>
+                            <div>
+                                <label>background color</label>
+                            </div><br>
+                            <div class="color-palette">
+                                <div class="color" onclick="color1()"></div>
+                                <div class="color" onclick="color2()"></div>
+                                <div class="color" onclick="color3()"></div>
+                                <div class="color" onclick="color4()"></div>
+                                <div class="color" onclick="color5()"></div>
+                                <div class="color" onclick="color6()"></div>
+                                <div class="selected"><i class="fa fa-check" aria-hidden="true"></i></div>
+                            </div>
+                        </div>                           
+                    </div><br><br>
+                    <div>
+                        <button id="done_btn" style="cursor:pointer;" onclick="donebtn()">Done</button>
+                    </div> 
+                    <div>
+                        <p id="warning"></p>
+                    </div>   
+                </div>
+                    
+            </div>
+           
+        </div> 
+    </body>
+    <script src="index.js"></script>
+</html>
