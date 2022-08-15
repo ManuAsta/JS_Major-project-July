@@ -186,6 +186,9 @@ function search(){
         alert('please add the required creatives first');
         return;
     }
+    for(let i=0;i<5;i++){
+        document.getElementsByClassName("s_filter")[i].style.display="none";
+    }
     document.getElementById("add_creativebtn").disabled=true;
     document.getElementById('lists').innerHTML="";
     let s_search=document.getElementById("search_title").value;
@@ -208,10 +211,13 @@ function searchTitle(){
         alert('please select color first');
     }
     else {
-        let col=document.getElementsByClassName("selected")[0].style.color;
         for(let i=0;i<5;i++){
             document.getElementsByClassName("s_filter")[i].style.display="none";
         }
+        for(let i=0;i<5;i++){
+            document.getElementsByClassName("ts_filter")[i].style.display="none";
+        }
+        let col=document.getElementsByClassName("selected")[0].style.color;
         for(i in arr){
             let title=arr[i].title;
             let subtitle=arr[i].subtitle;
