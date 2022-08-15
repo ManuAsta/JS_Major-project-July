@@ -213,3 +213,14 @@ font-size:14px
     display: none;
   }
 
+.creative_list::first-line{
+    font-size: 25px;
+}
+
+.s_filter::first-line{
+    font-size: 25px;
+}
+
+.ts_filter::first-line{
+    font-size: 25px;
+}
