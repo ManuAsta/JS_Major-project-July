@@ -186,22 +186,28 @@ function search(){
         alert('please add the required creatives first');
         return;
     }
-    for(let i=0;i<5;i++){
-        document.getElementsByClassName("s_filter")[i].style.display="none";
-    }
-    document.getElementById("add_creativebtn").disabled=true;
-    document.getElementById('lists').innerHTML="";
-    let s_search=document.getElementById("search_title").value;
-        for(i in arr){
+    else{
+        for(let i=0;i<5;i++){
+            document.getElementsByClassName("s_filter")[i].style.display="none";
+        }
+        for(let i=0;i<arr.length;i++){
+            document.getElementsByClassName("creative_list")[i].style.display="none";
+        }
+        let col=document.getElementsByClassName("selected")[0].style.color;
+        let s_search=document.getElementById("search_title").value;
+        for(let i=0;i<arr.length;i++){
             let title=arr[i].title;
             let subtitle=arr[i].subtitle;
-            if(arr[i].bgc==s_bg && s_search==""){
-                let ele=document.getElementsByClassName("s_filter")[i];
-                ele.innerHTML=`${title}<br><br> ${subtitle}`;
-                ele.setAttribute('style','border: 1px solid black; padding: 20px; margin: 30px; border-radius:5px')
-                ele.style.backgroundColor=arr[i].bgc;
-            }
+                if(arr[i].bgc==col && s_search==""){
+                    let ele=document.getElementsByClassName("s_filter")[i];
+                    ele.innerHTML=`${title}<br><br> ${subtitle}`;
+                    ele.setAttribute('style','border: 1px solid black; padding: 20px; margin: 30px; border-radius:5px')
+                    ele.style.backgroundColor=col;
+                }
+        } 
+
     }
+    
 }
 
 
